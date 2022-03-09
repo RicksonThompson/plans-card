@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --blue: hsl(245, 75%, 52%);
+  --light-blue: hsl(225, 100%, 94%);
+  --very-light-blue: hsl(225, 100%, 98%);
+  --faded-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(255,100%,100%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: max-content;
+  width: 30%;
+  border-radius: 15px;
+  box-shadow: 0px 2px 18px var(--ligth-blue);
+}
+
+.container img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card-description div {
+  width: 50%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.card-description p {
+  color: var(--faded-blue);
+  font-size: 14px;
+}
+
+.card-description h1 {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.plans {
+  justify-content: space-between;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: var(--very-light-blue);
+  border-radius: 15px;
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.plans p {
+  color: var(--faded-blue);
+}
+
+.plans-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plans-description h3 {
+  color: var(--dark-blue);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.btn-paid:hover {opacity: 0.6}
+
+.btn-cancel:hover {opacity: 0.6}
+
+.btn-paid {
+  background-color: var(--blue);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: var(--very-light-blue);
+}
+
+.btn-cancel {
+  padding: 10px;
+  color: var(--faded-blue);
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 1368px) {
+  .container {
+    width: 475px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1368px) {
+  .container {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container {
+    width: 80%;
+  }
+
+  .plans {
+    width: 85%;
+  }
+
+  .buttons {
+    width: 85%;
+  }
+}
